@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>All Posts</title>
+</head>
+<body>
+    <h1>All Posts</h1>
+    <%for(let item of posts) {%>
+        <div class="box">
+            <h3><%= item.username %></h3>
+            <p><%= item.content %></p>
+            <br>
+            <a href="/show/<%=item.id%>">Details</a>
+            <a href="https://localhost:8080/posts<%posts.id%>/edit">Edit</a>
+        </div>
+    <%}%>
+    <br>
+    <br>
+    <button><a href="http://localhost:8080/posts/new">Add New Post</a></button>
+</body>
+</html>
